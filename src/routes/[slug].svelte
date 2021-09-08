@@ -1,8 +1,8 @@
 <script context="module" lang="ts">
 	import type { LoadInput } from '@sveltejs/kit';
-	import type { Entry } from 'contentful';
+
 	import type { PageFields } from 'src/types';
-	import { getPageBySlug } from '../api/contentful';
+	import { getPageBySlug } from '../api/contentstack';
 
 	export const load = async ({ page }: LoadInput) => {
 		return {
@@ -15,12 +15,13 @@
 
 <script lang="ts">
 	import { Map } from '../components/map';
-	export let page: Entry<PageFields>;
-	console.log(page);
+	export let page: PageFields;
 </script>
 
-{#if page.fields.components}
-	{#each page.fields.components as component}
-		<svelte:component this={Map[component.sys.contentType.sys.id]} {...component.fields} {page} />
+{#if page.components}
+	{#each page.components as component}
+		{#if component._content_type_uid}
+			<svelte:component this={Map[component._content_type_uid]} {...component} {page} />
+		{/if}
 	{/each}
 {/if}

@@ -1,22 +1,24 @@
-# Contentful + SvelteKit + Tailwind CSS
+# Contentstack + SvelteKit + Tailwind CSS
 
-Example project using SvelteKit with the [Contentful Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/), deployed to [Vercel](https://vercel.com).
+Example project using SvelteKit with the [Contentstack Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api/), deployed to [Vercel](https://vercel.com).
 
 ![web](static/web.png)
 
-_Live Example: https://contentful-svelte-tailwind.vercel.app/_
+_Live Example: https://contentstack-svelte.vercel.app/_
 
-_Live Example: https://contentful-svelte-tailwind.vercel.app/test_
+_Live Example: https://contentstack-svelte.vercel.app/test_
 
 ## Developing
 
 ### Env variables
 
-Remember to set up a `.env` file with your contentful keys
+Remember to set up a `.env` file with your contentstack keys
 
 ```env
-VITE_CONTENTFUL_SPACE_ID=""
-VITE_CONTENTFUL_TOKEN=""
+VITE_CONTENTSTACK_STACK_API_KEY=''
+VITE_CONTENTSTACK_ENVIRONMENT=''
+VITE_CONTENTSTACK_DELIVERY_TOKEN=''
+VITE_CONTENTSTACK_REGION=''
 ```
 
 Once you've created a project and installed dependencies with `npm install`, start a development server:

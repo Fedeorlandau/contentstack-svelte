@@ -1,12 +1,11 @@
 <script lang="ts">
-	import type { Entry } from 'contentful';
 	import type { PageFields } from 'src/types';
 
 	export let title: string;
 	export let description: string;
-	export let ctaText: string;
-	export let ctaLink: string;
-	export let page: Entry<PageFields>;
+	export let cta_text: string;
+	export let url: string;
+	export let page: PageFields;
 </script>
 
 <div class="relative w-full h-full pb-10">
@@ -20,13 +19,13 @@
 					{description}
 				</h2>
 				<h3>
-					Page: {page.fields.title}
+					Page: {page.title}
 				</h3>
 			</div>
-			<a href={ctaLink} target="_blank"
+			<a href={url} target="_blank"
 				><button
 					class="hover:opacity-90 text-xl w-full xl:text-3xl xl:w-11/12 mt-4 xl:mt-11 f-f-r py-6 bg-indigo-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700"
-					>{ctaText}</button
+					>{cta_text}</button
 				></a
 			>
 		</div>
