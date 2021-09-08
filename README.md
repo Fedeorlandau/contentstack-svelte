@@ -52,4 +52,4 @@ This starter kit relies on the following content models.
 * Title, short text.
 * Description, short text
 * CTA Text, short text
-* CTA Link, short text
+* URL, short text
